@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  timetrack:
+    build: .
+    environment:
+      - GOOGLE_AUTH_URL=https://accounts.google.com/o/oauth2/auth
+      - GOOGLE_TOKEN_URI=https://oauth2.googleapis.com/token
+      - GOOGLE_PROJECT_ID=
+      - GOOGLE_AUTH_PROVIDER_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
+      - GOOGLE_CLIENT_ID=
+      - GOOGLE_CLIENT_SECRET=
+      - CALENDAR_TRACK=
+      - CALENDAR_WORKTIME=
+#     - TOKEN_FILE=
+    volumes:
+      - "./:/data"
